@@ -1,0 +1,48 @@
+proc            /proc           proc    defaults          0       0
+/dev/mmcblk0p1  /boot           vfat    defaults          0       2
+/dev/mmcblk0p2  /               ext4    defaults,noatime  0       1
+#https://wiki.ubuntu.com/MountWindowsSharesPermanently
+//192.168.1.1/TmpShare /mnt/TmpShare cifs uid=1000,credentials=/home/pi/.smbcredentials,iocharset=utf8,sec=ntlm 0 0
+//192.168.1.35/public/media /mnt/media cifs guest,uid=1000,iocharset=utf8 0 0
+#######################
+# Retro Pi Mounts
+#######################
+#Sega Genisis
+#/mnt/media/Games/Sega_Genesis_(Sega_Mega_Drive)/ROMs /home/pi/RetroPie/roms/mastersystem-osmose none bind 0 0
+#/mnt/media/Games/Sega_Genesis_(Sega_Mega_Drive)/ROMs /home/pi/RetroPie/roms/mastersystem none bind 0 0
+#/mnt/media/Games/Sega_Genesis_(Sega_Mega_Drive)/ROMs /home/pi/RetroPie/roms/megadrive-dgen none bind 0 0
+#/mnt/media/Games/Sega_Genesis_(Sega_Mega_Drive)/ROMs /home/pi/RetroPie/roms/megadrive none bind 0 0
+#Sega32x
+#/mnt/media/Games/Sega32x/ROMs /home/pi/RetroPie/roms/sega32x-dgen none bind 0 0
+#/mnt/media/Games/Sega32x/ROMs /home/pi/RetroPie/roms/sega32x none bind 0 0
+#GameGear
+#/mnt/media/Games/Game_Gear/ROMs /home/pi/RetroPie/roms/gamegear none bind 0 0
+#/mnt/media/Games/Game_Gear/ROMs /home/pi/RetroPie/roms/gamegear-osmose none bind 0 0
+#NES
+/mnt/media/Games/Nintendo_NES/ROMs /home/pi/RetroPie/roms/nes none bind 0 0
+#Super Nintendo
+/mnt/media/Games/Super_Nintendo/ROMs /home/pi/RetroPie/roms/snes none bind 0 0
+#/mnt/media/Games/Super_Nintendo/ROMs /home/pi/RetroPie/roms/snes-pisnes none bind 0 0
+#/mnt/media/Games/Super_Nintendo/ROMs /home/pi/RetroPie/roms/snes-snes9xrpi none bind 0 0
+#Nintendo 64
+#/mnt/media/Games/Nintendo_64/ROMs /home/pi/RetroPie/roms/n64-mupen64plus none bind 0 0
+/mnt/media/Games/Nintendo_64/ROMs /home/pi/RetroPie/roms/n64 none bind 0 0
+#Gameboy
+#/mnt/media/Games/Gameboy/ROMs /home/pi/RetroPie/roms/gb none bind 0 0
+#/mnt/media/Games/Gameboy_Advance/ROMs /home/pi/RetroPie/roms/gba none bind 0 0
+#/mnt/media/Games/Gameboy_Color/ROMs /home/pi/RetroPie/roms/gbc none bind 0 0
+#TurboGrafx16
+#NeoGeo
+#/mnt/media/Games/Neo_Geo/ROMs /home/pi/RetroPie/roms/neogeo-gngeopi none bind 0 0
+#/mnt/media/Games/Neo_Geo/ROMs /home/pi/RetroPie/roms/neogeo none bind 0 0
+#Atari_2600
+#/mnt/media/Games/Atari_2600/ROMs /home/pi/RetroPie/roms/atari2600-libretro none bind 0 0
+#/mnt/media/Games/Atari_2600/ROMs /home/pi/RetroPie/roms/atari2600-stella none bind 0 0
+#Atari 800
+#/mnt/media/Games/Atari_2600/ROMs /home/pi/RetroPie/roms/atari800 none bind 0 0
+#Playstation
+#/mnt/media/Games/Playstation/ROMs /home/pi/RetroPie/roms/psx none bind 0 0
+
+
+
+# a swapfile is not a swap partition, so no using swapon|off from here on, use  dphys-swapfile swap[on|off]  for that
